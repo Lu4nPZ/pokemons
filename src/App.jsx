@@ -1,6 +1,6 @@
-import './App.css'
 import { createGlobalStyle } from 'styled-components'
-import { Home } from './pages/Home/Home'
+import { ThemeProvider } from './contexts/theme-context'
+import { AppRoutes } from './pages/routes'
 
 function App() {
 
@@ -11,13 +11,17 @@ function App() {
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
     }
+
+    a{
+      text-decoration: none;
+    }
   `
 
   return (
-    <>
+   <ThemeProvider>
       <GlobalStyles />
-      <Home />
-    </>
+      <AppRoutes />
+   </ThemeProvider>   
   )
 }
 
