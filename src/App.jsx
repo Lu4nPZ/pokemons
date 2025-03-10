@@ -1,10 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from './contexts/theme-context'
 import { AppRoutes } from './pages/routes'
+import { ThemeContext } from './contexts/theme-context'
+import { useContext } from 'react'
 
-function App() {
-
-  const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
     * {
       margin: 0;
       padding: 0;
@@ -14,14 +13,18 @@ function App() {
 
     a{
       text-decoration: none;
+      color: ${({ theme }) => theme.color};
     }
   `
 
+function App() {
+  const { theme } = useContext(ThemeContext)
+
   return (
-   <ThemeProvider>
-      <GlobalStyles />
+    <>
+      <GlobalStyles theme={theme}/>
       <AppRoutes />
-   </ThemeProvider>   
+    </> 
   )
 }
 

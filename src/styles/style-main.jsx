@@ -7,7 +7,7 @@ export const Main = styled.main`
     flex-direction: column;
 
     .titulo{
-        width: 60%;
+        width: 80%;
         color: #fff;
         font-size: 1.2em;
         text-align: center;
@@ -41,7 +41,7 @@ export const Main = styled.main`
         }
         
         img{
-            width: 90%;
+            width: 70%;
         }
 
         p{

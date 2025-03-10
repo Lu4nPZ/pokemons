@@ -36,12 +36,12 @@ const Home = () => {
                 <div className='cards'>
                     {pokemons.map((pokemon)=>{
                         return(
-                            <div className='card' key={pokemon.id} style={{color: theme.color, backgroundColor: theme.backgroundColor}}>
-                                <Link to={`/details/${pokemon.id}`}>
-                                    <img src={pokemon.sprites.front_default} alt="image-pokemon" />
-                                    <p>{pokemon.name}</p>
-                                </Link>
-                            </div>
+                            <Link to={`/details/${pokemon.id}`} key={pokemon.id}>
+                                <div className='card' style={{color: theme.color, backgroundColor: theme.backgroundColor}}>
+                                        <img src={pokemon.sprites.other["official-artwork"].front_default} alt="image-pokemon" />
+                                        <p>{pokemon.name}</p>
+                                </div>
+                            </Link>
                         )
                     })}
                 </div>

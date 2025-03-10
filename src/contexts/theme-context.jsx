@@ -8,7 +8,7 @@ export const themes = {
     },
     dark: {
         color: '#fff',
-        backgroundColor: '#000',
+        backgroundColor: '#595959',
     }
 }
 

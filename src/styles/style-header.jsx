@@ -1,10 +1,10 @@
 import { styled } from 'styled-components'
 
-export const Header = styled.header`
+export const HeaderStyle = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 5em;
+    padding: 1% 5%;
 
     .img-pokeball{
         width: 3em;
@@ -17,6 +17,6 @@ export const Header = styled.header`
     }
 
     .logo-pokemon{
-        width: 20em;
+        width: 30%;
     }
 `
